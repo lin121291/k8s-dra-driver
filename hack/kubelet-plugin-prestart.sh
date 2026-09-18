@@ -48,6 +48,7 @@ validate_and_exit_on_success () {
             /driver-root/usr/sbin \
             /driver-root/bin \
             /driver-root/sbin \
+            /driver-root/usr/local/bin \
         -maxdepth 1 -type f -name "nvidia-smi" 2> /dev/null | head -n1
     )
 
@@ -63,6 +64,8 @@ validate_and_exit_on_success () {
             /driver-root/lib64 \
             /driver-root/lib/x86_64-linux-gnu \
             /driver-root/lib/aarch64-linux-gnu \
+            /driver-root/usr/local/lib \
+            /driver-root/usr/local/lib64 \
         -maxdepth 1 -type f -name "libnvidia-ml.so.1" 2> /dev/null | head -n1
     )
 
