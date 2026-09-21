@@ -42,7 +42,7 @@ validate_and_exit_on_success () {
     # found".
 
     NV_PATH=$( \
-        find \
+        find -L \
             /driver-root/opt/bin \
             /driver-root/usr/bin \
             /driver-root/usr/sbin \
