@@ -94,7 +94,7 @@ ARG VERSION="N/A"
 ARG GIT_COMMIT="unknown"
 RUN arch="${TARGETARCH:-$(uname -m | sed -e 's,aarch64,arm64,' -e 's,x86_64,amd64,')}" && \
     if [ "$arch" = "amd64" ]; then \
-        cc=gcc; \
+        cc=x86_64-linux-gnu-gcc; \
     elif [ "$arch" = "arm64" ]; then \
         cc=aarch64-linux-gnu-gcc; \
     else \
